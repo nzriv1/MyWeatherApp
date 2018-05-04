@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Weather App</string>
+    <string name="error_title">Sorry!</string>
+    <string name="error_message">Error. Please try again</string>
+    <string name="error_button_ok_text">OK</string>
+    <string name="network_unavailable_message">Network is unavailable.</string>
+    <string name="dark_sky_message"><a href="https://darksky.net/poweredby">Powered by Dark Sky</a></string>
+</resources>
