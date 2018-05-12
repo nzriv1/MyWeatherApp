@@ -1,20 +1,20 @@
-package com.nzriv.myweatherapp;
+package com.nzriv.myweatherapp.weather;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
 
-public class CurrentWeather {
+public class Current {
 
     private String location, icon, summary, timeZone;
     private long time;
     private double temperature, humidity, precipChance;
 
-    public CurrentWeather() {
+    public Current() {
     }
 
-    public CurrentWeather(String location, String icon, String summary, String timeZone, long time, double temperature,
-                          double humidity, double precipChance) {
+    public Current(String location, String icon, String summary, String timeZone, long time, double temperature,
+                   double humidity, double precipChance) {
         this.location = location;
         this.icon = icon;
         this.summary = summary;
@@ -42,46 +42,7 @@ public class CurrentWeather {
     }
 
     public int getIconID() {
-
-//        cases gathered from Dark Sky API documentation - different possibilities of icons listed.
-//        Setting default to clear_day to start.
-
-        int iconID = R.drawable.clear_day;
-
-        switch (icon) {
-            case "clear-day":
-                iconID = R.drawable.clear_day;
-                break;
-            case "clear-night":
-                iconID = R.drawable.clear_night;
-                break;
-            case "rain":
-                iconID = R.drawable.rain;
-                break;
-            case "snow":
-                iconID = R.drawable.snow;
-                break;
-            case "sleet":
-                iconID = R.drawable.sleet;
-                break;
-            case "wind":
-                iconID = R.drawable.wind;
-                break;
-            case "fog":
-                iconID = R.drawable.fog;
-                break;
-            case "cloudy":
-                iconID = R.drawable.cloudy;
-                break;
-            case "partly-cloudy-day":
-                iconID = R.drawable.partly_cloudy;
-                break;
-            case "partly-cloudy-night":
-                iconID = R.drawable.cloudy_night;
-                break;
-        }
-
-        return iconID;
+        return Forecast.getIconID(icon);
     }
 
     public String getSummary() {

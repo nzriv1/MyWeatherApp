@@ -1,4 +1,4 @@
-package com.nzriv.myweatherapp;
+package com.nzriv.myweatherapp.UI;
 
 import android.app.Activity;
 import android.app.Application;
